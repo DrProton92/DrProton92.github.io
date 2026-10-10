@@ -13,30 +13,21 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Beacon"
+    name: "Perspective Solutions"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: ""
     # Schema.org type for structured data
     type: organization # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: "The customer feedback platform for product teams."
+    tagline: "Software Development and Music Production since 1998."
     # Site meta description for search engines and social sharing
-    description: "Beacon captures customer feedback from every channel — Slack,
-      email, support, in-app — and uses AI to surface what matters. Turn customer
-      noise into your roadmap."
+    description: "Perspective Solutions is a sole proprietorship offering Software
+      Development and Music Production services, in business since 1998."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
-      twitter: "GoOwnable" # Twitter/X handle for Twitter Cards (without @)
+      twitter: "" # Twitter/X handle for Twitter Cards (without @)
       # Site-wide social links (rendered in footer, etc.)
-      links:
-        - icon: brands/x
-          url: https://x.com/GoOwnable
-        - icon: brands/github
-          url: https://github.com/HugoBlox/kit
-        - icon: brands/discord
-          url: https://discord.gg/z8wNYzb
-        - icon: brands/linkedin
-          url: https://linkedin.com/company/example
+      links: []
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
