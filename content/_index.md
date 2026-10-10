@@ -49,7 +49,7 @@ sections:
     content:
       subtitle: Technical expertise and creative perspective
       title: Services offered
-      text: Two areas of expertise, one independent business. Choose a service to learn more.
+      text: Two areas of expertise, one independent business operating since 1998.
       items:
         - name: Software Development
           icon: code-bracket
