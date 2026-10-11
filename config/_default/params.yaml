@@ -113,8 +113,8 @@ hugoblox:
   footer:
     # Footer style variant
     style: columns # minimal | columns | centered
-    show_logo: true
-    show_title: true
+    show_logo: false
+    show_title: false
     show_tagline: true
     # Override footer title (defaults to identity.name)
     title: ""

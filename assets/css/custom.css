@@ -1,0 +1,52 @@
+.hero-logo-stacked .hero-block-container > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo-stacked .hero-block-container > div > div > div:first-child {
+  order: 2;
+  width: 100%;
+}
+
+.hero-logo-stacked .hero-block-container > div > div > div:last-child {
+  order: 1;
+  width: min(100%, 12rem);
+  margin: 0 auto 1rem;
+}
+
+.service-page-hero .hero-block-container > div {
+  padding-block: 1rem;
+}
+
+.service-page-hero.hbb-section {
+  padding-block: 0;
+}
+
+.service-page-content.hbb-section {
+  padding-block: 2rem;
+}
+
+footer.container {
+  margin-top: 2rem;
+}
+
+footer.container > footer[aria-labelledby="footer-heading"] > div {
+  padding-top: 0;
+}
+
+footer.container > footer[aria-labelledby="footer-heading"] > div > div {
+  display: block;
+}
+
+footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:first-child p {
+  width: auto;
+  margin: 0;
+  font-size: clamp(0.875rem, 2.2vw, 1.5rem);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:last-child {
+  margin-top: 1.5rem;
+}

@@ -6,15 +6,16 @@ summary: Software development services from Perspective Solutions.
 sections:
   - block: hero
     content:
-      eyebrow: Perspective Solutions
       title: Software Development
       text: Practical software solutions that turn ideas into working applications.
-      primary_action:
-        text: Our services
-        url: "#services"
-      secondary_action:
-        text: All services
-        url: "/#services"
+      media:
+        type: image
+        src: logo_with_music.png
+        alt: Perspective Solutions logo
+    design:
+      layout: stacked
+      size: compact
+      css_class: hero-logo-stacked service-page-hero
   - block: features
     id: services
     content:
@@ -31,7 +32,7 @@ sections:
           icon: wrench-screwdriver
           description: Updates, troubleshooting, and improvements for existing applications.
     design:
-      css_class: "bg-gray-50 dark:bg-gray-900/50"
+      css_class: "service-page-content bg-gray-50 dark:bg-gray-900/50"
   - block: cta-card
     content:
       title: Explore our creative services

@@ -6,7 +6,6 @@ type: landing
 sections:
   - block: hero
     content:
-      eyebrow: Independent business since 1998
       title: Perspective Solutions
       text: A sole proprietorship bringing together Software Development and Music Production. Explore practical software solutions and creative music services.
       primary_action:
@@ -19,11 +18,17 @@ sections:
         url: "/music-production/"
         icon: musical-note
         style: ghost
+      media:
+        type: image
+        src: logo.png
+        alt: Perspective Solutions logo
     design:
+      layout: stacked
+      size: compact
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark"
+      css_class: "dark hero-logo-stacked"
       background:
         # Deep navy base; radial glow paints a soft violet spotlight from above
         color: "#0a0e27"
@@ -44,19 +49,4 @@ sections:
           orb_count: 2
           positions: ["top-1/3 left-1/4", "bottom-1/3 right-1/4"]
           sizes: ["w-[32rem] h-[32rem]", "w-[26rem] h-[26rem]"]
-  - block: features
-    id: services
-    content:
-      subtitle: Technical expertise and creative perspective
-      title: Services offered
-      text: Two areas of expertise, one independent business operating since 1998.
-      items:
-        - name: Software Development
-          icon: code-bracket
-          description: Custom applications, web development, and ongoing software maintenance.
-        - name: Music Production
-          icon: musical-note
-          description: Production, arrangement, recording, editing, mixing, and mastering.
-    design:
-      css_class: "bg-gray-50 dark:bg-gray-900/50"
 ---
