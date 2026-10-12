@@ -19,8 +19,6 @@ sections:
   - block: features
     id: services
     content:
-      title: Music production services
-      text: Develop your sound with support throughout the production process.
       items:
         - name: Production and arrangement
           icon: musical-note
@@ -33,6 +31,18 @@ sections:
           description: Balance and polish your tracks into a finished listening experience.
     design:
       css_class: "service-page-content bg-gray-50 dark:bg-gray-900/50"
+  - block: portfolio
+    id: portfolio
+    content:
+      title: Portfolio
+      subtitle: Project stories and case studies coming soon.
+      filters:
+        folders:
+          - music-production
+    design:
+      css_class: service-page-portfolio
+      columns: 3
+      fallback_icon: musical-note
   - block: cta-card
     content:
       title: Explore our technical services
@@ -40,4 +50,8 @@ sections:
       button:
         text: Software Development
         url: "/software-development/"
+    design:
+      css_class: service-page-cta
+      card:
+        css_class: "bg-gray-100 dark:bg-gray-800/60"
 ---

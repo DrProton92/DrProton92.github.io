@@ -6,15 +6,12 @@ main:
   - name: Home
     url: /#top
     weight: 10
-  - name: Services
-    url: /#services
-    weight: 20
   - name: Software Development
     url: /software-development/
-    weight: 30
+    weight: 20
   - name: Music Production
     url: /music-production/
-    weight: 40
+    weight: 30
 
 # Footer links (4-column layout)
 #   Top-level items become column headings, children become links.

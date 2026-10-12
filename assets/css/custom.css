@@ -11,20 +11,81 @@
 
 .hero-logo-stacked .hero-block-container > div > div > div:last-child {
   order: 1;
-  width: min(100%, 12rem);
+  width: min(100%, 36rem);
   margin: 0 auto 1rem;
 }
 
-.service-page-hero .hero-block-container > div {
-  padding-block: 1rem;
+.service-page-hero .hero-block-container > div > div {
+  padding-block: 0 !important;
+}
+
+.service-page-hero .hero-block-container > div > div > div:last-child {
+  width: min(100%, 15rem);
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
 }
 
 .service-page-hero.hbb-section {
-  padding-block: 0;
+  padding-block: 0 !important;
 }
 
 .service-page-content.hbb-section {
-  padding-block: 2rem;
+  padding-block: 0 !important;
+}
+
+.service-page-content .features-block-container > div {
+  padding-block: 1rem;
+}
+
+.service-page-portfolio.hbb-section {
+  padding-block: 0.75rem !important;
+  border-block: 1px solid rgb(99 102 241 / 18%);
+  background: linear-gradient(120deg, rgb(14 165 233 / 10%), rgb(124 58 237 / 10%));
+}
+
+.service-page-portfolio > .mx-auto.max-w-7xl {
+  padding-block: 1rem !important;
+}
+
+.service-page-portfolio > .mx-auto.max-w-7xl > .text-center {
+  margin-bottom: 1.5rem;
+}
+
+.service-page-portfolio h2 {
+  color: #3730a3;
+}
+
+html.dark .service-page-portfolio.hbb-section {
+  border-color: rgb(129 140 248 / 20%);
+  background: linear-gradient(120deg, rgb(14 165 233 / 8%), rgb(124 58 237 / 10%));
+}
+
+html.dark .service-page-portfolio h2 {
+  color: #c7d2fe;
+}
+
+.service-page-cta.hbb-section {
+  padding-block: 1rem !important;
+}
+
+.service-page-cta .cta-card-block-container > div {
+  max-width: 64rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: none;
+}
+
+.service-page-cta .cta-card-block-container h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.service-page-cta .cta-card-block-container [class*="mt-6"] {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.service-page-cta .cta-card-block-container [class*="mt-10"] {
+  margin-top: 1rem;
 }
 
 footer.container {
@@ -47,6 +108,14 @@ footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:fi
   white-space: nowrap;
 }
 
+footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:first-child p {
+  text-align: center;
+}
+
 footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:last-child {
   margin-top: 1.5rem;
+}
+
+footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:last-child > div {
+  text-align: center;
 }

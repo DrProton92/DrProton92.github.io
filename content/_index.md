@@ -6,7 +6,6 @@ type: landing
 sections:
   - block: hero
     content:
-      title: Perspective Solutions
       text: A sole proprietorship bringing together Software Development and Music Production. Explore practical software solutions and creative music services.
       primary_action:
         text: Software Development
@@ -17,7 +16,7 @@ sections:
         text: Music Production
         url: "/music-production/"
         icon: musical-note
-        style: ghost
+        style: gradient
       media:
         type: image
         src: logo.png

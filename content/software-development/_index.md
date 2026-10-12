@@ -19,8 +19,6 @@ sections:
   - block: features
     id: services
     content:
-      title: Software development services
-      text: From planning a new application to improving existing software, bring a fresh perspective to your project.
       items:
         - name: Custom applications
           icon: code-bracket
@@ -33,6 +31,18 @@ sections:
           description: Updates, troubleshooting, and improvements for existing applications.
     design:
       css_class: "service-page-content bg-gray-50 dark:bg-gray-900/50"
+  - block: portfolio
+    id: portfolio
+    content:
+      title: Portfolio
+      subtitle: Project stories and case studies coming soon.
+      filters:
+        folders:
+          - software-development
+    design:
+      css_class: service-page-portfolio
+      columns: 3
+      fallback_icon: code-bracket
   - block: cta-card
     content:
       title: Explore our creative services
@@ -40,4 +50,8 @@ sections:
       button:
         text: Music Production
         url: "/music-production/"
+    design:
+      css_class: service-page-cta
+      card:
+        css_class: "bg-gray-100 dark:bg-gray-800/60"
 ---
