@@ -19,7 +19,7 @@ hugoblox:
     # Schema.org type for structured data
     type: organization # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: "Software Development and Music Production since 1998."
+    tagline: "Software Development and Music Production since 1998"
     # Site meta description for search engines and social sharing
     description: "Perspective Solutions is a sole proprietorship offering Software
       Development and Music Production services, in business since 1998."

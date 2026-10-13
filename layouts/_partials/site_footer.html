@@ -1,0 +1,6 @@
+<footer class="container mx-auto site-footer text-sm leading-6 text-slate-700 dark:text-slate-200">
+  {{ with site.Params.hugoblox.identity.tagline }}
+    <p class="site-footer-tagline text-gray-500 dark:text-gray-300">{{ . }}</p>
+  {{ end }}
+  {{ partial "site_footer_license" . }}
+</footer>

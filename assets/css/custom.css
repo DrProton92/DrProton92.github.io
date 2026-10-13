@@ -26,7 +26,7 @@
 }
 
 .service-page-hero.hbb-section {
-  padding-block: 0 !important;
+  padding-block: 2rem 0 !important;
 }
 
 .service-page-content.hbb-section {
@@ -88,34 +88,43 @@ html.dark .service-page-portfolio h2 {
   margin-top: 1rem;
 }
 
-footer.container {
-  margin-top: 2rem;
+.site-footer {
+  margin-block: 2rem 1rem;
+  padding-inline: 1rem;
+  text-align: center;
 }
 
-footer.container > footer[aria-labelledby="footer-heading"] > div {
-  padding-top: 0;
-}
-
-footer.container > footer[aria-labelledby="footer-heading"] > div > div {
-  display: block;
-}
-
-footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:first-child p {
-  width: auto;
+.site-footer-tagline {
   margin: 0;
   font-size: clamp(0.875rem, 2.2vw, 1.5rem);
   line-height: 1.4;
-  white-space: nowrap;
 }
 
-footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:first-child p {
-  text-align: center;
+.site-footer .powered-by {
+  margin: 1rem 0 0;
+}
+#site-header .navbar-brand {
+  font-family: var(--hb-font-heading);
 }
 
-footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:last-child {
-  margin-top: 1.5rem;
+#site-header #nav-menu .nav-link {
+  font-family: var(--hb-font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
 }
 
-footer.container > footer[aria-labelledby="footer-heading"] > div > div > div:last-child > div {
-  text-align: center;
+/* Separate the brand from the services, with About and Contact on the right. */
+@media (min-width: 1024px) {
+  #site-header #nav-menu {
+    flex: 1;
+    margin-inline: clamp(2.5rem, 4vw, 4.5rem) 1rem;
+  }
+
+  #site-header #nav-menu .nav-link {
+    white-space: nowrap;
+  }
+
+  #site-header #nav-menu > .nav-item:has(> a[href$="/about/"]) {
+    margin-inline-start: auto;
+  }
 }

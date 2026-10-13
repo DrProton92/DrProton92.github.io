@@ -12,28 +12,9 @@ main:
   - name: Music Production
     url: /music-production/
     weight: 30
-
-# Footer links (4-column layout)
-#   Top-level items become column headings, children become links.
-footer:
-  - name: Services
-    weight: 10
-  - parent: Services
-    name: Software Development
-    url: /software-development/
-    weight: 10
-  - parent: Services
-    name: Music Production
-    url: /music-production/
-    weight: 20
-
-  - name: Legal
+  - name: About
+    url: /about/
     weight: 40
-  - parent: Legal
-    name: Privacy Policy
-    url: /privacy/
-    weight: 10
-  - parent: Legal
-    name: Terms of Service
-    url: /terms/
-    weight: 20
+  - name: Contact
+    url: /contact/
+    weight: 50
