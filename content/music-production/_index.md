@@ -35,13 +35,14 @@ sections:
     id: portfolio
     content:
       title: Portfolio
-      subtitle: Project stories and case studies coming soon.
+      subtitle: Explore music projects, from initial ideas to finished productions.
+      count: 0
       filters:
         folders:
           - music-production
     design:
       css_class: service-page-portfolio
-      columns: 3
+      columns: 2
       fallback_icon: musical-note
   - block: cta-card
     content:

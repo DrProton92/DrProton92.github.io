@@ -1,0 +1,36 @@
+{{/* Both single-page bundles and project sections can be portfolio entries.
+     Supporting pages use project-detail so they never become duplicate cards. */}}
+{{ $page := .wcPage }}
+{{ $content := .wcBlock.content }}
+{{ $folders := $content.filters.folders | default (slice $page.Section) }}
+{{ $projects := where site.Pages "Section" "in" $folders }}
+{{ $projects = where $projects "Type" "eq" "project" }}
+{{ $projects = where $projects "Kind" "in" (slice "page" "section") }}
+{{ $projects = $projects.ByDate.Reverse }}
+{{ with $content.count }}{{ $projects = first (int .) $projects }}{{ end }}
+
+<div class="portfolio-container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="text-center portfolio-heading">
+    {{ with $content.title }}<h2 class="text-3xl font-bold">{{ . }}</h2>{{ end }}
+    {{ with $content.subtitle }}<p class="text-gray-600 dark:text-gray-300">{{ . }}</p>{{ end }}
+  </div>
+  <div class="portfolio-grid">
+    {{ range $projects }}
+      <a class="portfolio-card portfolio-card-link" href="{{ .RelPermalink }}">
+          {{ with .Resources.GetMatch "{featured,cover,thumbnail}*" }}
+            {{ $image := . }}
+            {{ if reflect.IsImageResourceProcessable . }}{{ $image = .Fill "960x600 webp" }}{{ end }}
+            <img class="portfolio-card-image" src="{{ $image.RelPermalink }}" alt="" width="960" height="600" loading="lazy" decoding="async">
+          {{ end }}
+          <div class="portfolio-card-copy">
+            {{ if .Params.example }}<span class="project-example-label">Example project</span>{{ end }}
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Summary | plainify }}</p>
+            <span class="portfolio-read-more" aria-hidden="true">Read project story →</span>
+          </div>
+      </a>
+    {{ else }}
+      <p>Project stories coming soon.</p>
+    {{ end }}
+  </div>
+</div>

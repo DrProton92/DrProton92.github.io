@@ -1,0 +1,106 @@
+# Managing the portfolios
+
+The Software Development and Music Production pages each show a portfolio grid.
+Each card is one link containing an image, title, and summary. The grid is
+rendered by Hugo, so the cards and links work without JavaScript.
+
+## Add a project
+
+Create a project bundle in the appropriate service folder:
+
+```sh
+hugo new content --kind project software-development/my-project
+# Or:
+hugo new content --kind project music-production/my-project
+```
+
+The project archetype creates an `index.md` page and a placeholder `cover.svg`.
+Edit the title, summary, date, image description, and Markdown story in
+`index.md`. Replace the placeholder illustration with your own picture. Use
+`featured.jpg`, `featured.png`, or `featured.webp` for a photo or screenshot;
+Hugo creates optimized images and uses the featured image for sharing metadata.
+Remove the placeholder when you add the replacement. SVG illustrations should
+use `cover.svg` (the upstream theme's sharing metadata expects raster featured
+images). Landscape images around 1600 × 1000 pixels work well.
+
+Set `draft: false` to publish the page in a normal build. New projects appear
+automatically in their service's portfolio, newest first. Keep `type: project`:
+this is how the grid distinguishes project overviews from supporting pages.
+The `example: true` flag adds an Example project label; remove it or set it to
+`false` for real work. The four supplied sample projects are clearly labeled.
+
+```text
+content/
+  software-development/
+    _index.md                      # Service page and its portfolio grid
+    my-project/
+      index.md                     # Project story
+      featured.jpg                 # Card and project image
+      screenshot.png               # Optional additional image
+  music-production/
+    _index.md
+    my-recording/
+      index.md
+      featured.jpg
+      listening-sample.mp3          # Optional audio
+```
+
+Reference additional images in the story with relative Markdown paths, such as
+`![Booking screen](screenshot.png)`. The theme also supports audio shortcodes,
+as demonstrated in the existing blog content.
+
+## Give a project multiple pages
+
+Use a branch bundle instead of a leaf bundle: rename `index.md` to `_index.md`
+and add supporting Markdown pages in the same directory. Keep the overview's
+`type: project`, and give every supporting page `type: project-detail`.
+Supporting pages automatically appear under "More about this project" on the
+overview and include links back to the overview and portfolio. They do not
+create extra portfolio cards.
+
+```text
+software-development/my-project/
+  _index.md                        # Overview, type: project
+  featured.jpg
+  implementation.md                # type: project-detail
+  walkthrough.md                   # type: project-detail
+```
+
+A supporting page needs only front matter and a Markdown body:
+
+```yaml
+---
+title: Design and implementation
+type: project-detail
+weight: 10
+summary: How the application was designed and built.
+---
+```
+
+The `weight` controls supporting-page order, lowest first. The Workflow
+Dashboard example demonstrates this structure. Its cascade also supplies
+`type: project-detail` to child pages as a default.
+
+## Templates and preview
+
+- `layouts/_partials/hbx/blocks/portfolio/block.html` selects project overviews
+  within each configured service folder and renders the cards.
+- `layouts/_partials/project-page.html` is the shared project-page layout,
+  including the image, story, supporting-page links, and back navigation.
+- `layouts/project/` handles both single-page and multi-page overviews.
+- `layouts/project-detail/` handles supporting pages.
+- `archetypes/project/` supplies the reusable starter bundle.
+- `assets/css/custom.css` controls the responsive cards and page layout.
+
+The service-page front matter configures the portfolio source in
+`content.filters.folders`. `count: 0` shows every project. The layout uses two
+columns on larger screens and one on small screens.
+
+Preview drafts with `hugo server --buildDrafts`. Before publishing, run:
+
+```sh
+hugo --minify
+node_modules/.bin/pagefind --site public
+```
+
+Project titles, summaries, and stories are marked for Pagefind search.

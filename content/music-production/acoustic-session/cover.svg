@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Acoustic recording session illustration">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#451a03"/><stop offset="1" stop-color="#9a3412"/></linearGradient><linearGradient id="wood" x2="1" y2="1"><stop stop-color="#fed7aa"/><stop offset="1" stop-color="#d97706"/></linearGradient></defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="711" cy="210" r="220" fill="#fb923c" opacity=".1"/>
+  <g stroke="#fdba74" opacity=".08" stroke-width="8"><path d="M50 0V600M100 0V600M150 0V600M200 0V600M250 0V600M300 0V600M350 0V600M400 0V600M450 0V600M500 0V600M550 0V600M600 0V600M650 0V600M700 0V600M750 0V600M800 0V600M850 0V600M900 0V600"/></g>
+  <ellipse cx="626" cy="541" rx="177" ry="18" fill="#1c1917" opacity=".35"/>
+  <g transform="rotate(12 630 330)">
+    <path d="M602 326C543 278 494 315 513 372C480 413 497 503 563 519C659 550 740 493 714 422C704 391 675 374 667 352C678 303 638 295 602 326Z" fill="url(#wood)" stroke="#92400e" stroke-width="5"/>
+    <rect x="613" y="144" width="30" height="221" rx="5" fill="#713f12"/><rect x="609" y="94" width="38" height="65" rx="8" fill="#b45309"/>
+    <circle cx="628" cy="391" r="33" fill="#292524" stroke="#92400e" stroke-width="8"/>
+    <rect x="595" y="458" width="65" height="16" rx="4" fill="#713f12"/>
+    <g stroke="#fef3c7" stroke-width="1" opacity=".7"><path d="M620 110V466M625 110V466M630 110V466M635 110V466"/></g>
+    <g stroke="#d6d3d1" opacity=".6"><path d="M613 172H643M613 193H643M613 216H643M613 243H643M613 270H643M613 299H643"/></g>
+  </g>
+  <path d="M326 344V516M326 492L255 550M326 492L397 550" stroke="#a8a29e" stroke-width="9" stroke-linecap="round"/>
+  <rect x="292" y="160" width="68" height="156" rx="32" fill="#d6d3d1"/>
+  <rect x="300" y="170" width="52" height="89" rx="24" fill="#78716c"/>
+  <g stroke="#d6d3d1" stroke-width="3"><path d="M302 188H350M301 200H351M300 212H352M301 224H351M303 236H349"/></g>
+  <path d="M280 270V294Q280 341 326 341Q372 341 372 294V270" stroke="#a8a29e" stroke-width="7" fill="none"/>
+  <text x="90" y="90" font-family="sans-serif" font-size="15" letter-spacing="6" fill="#fed7aa">ACOUSTIC / SESSION</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Dashboard illustration">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1535"/><stop offset="1" stop-color="#4338ca"/></linearGradient>
+    <linearGradient id="chart" x2="0" y2="1"><stop stop-color="#38bdf8" stop-opacity=".4"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="850" cy="30" r="260" fill="#818cf8" opacity=".12"/>
+  <rect x="88" y="66" width="784" height="468" rx="22" fill="#101a36" stroke="#818cf8" stroke-opacity=".5"/>
+  <path d="M88 124H872M260 124V534" stroke="#344369"/>
+  <circle cx="116" cy="96" r="5" fill="#f472b6"/><circle cx="134" cy="96" r="5" fill="#fbbf24"/><circle cx="152" cy="96" r="5" fill="#34d399"/>
+  <text x="288" y="102" fill="#e0e7ff" font-family="sans-serif" font-size="16" letter-spacing="2">WORKFLOW</text>
+  <rect x="110" y="153" width="128" height="34" rx="8" fill="#4f46e5"/>
+  <g fill="#8b9cbf"><rect x="128" y="165" width="88" height="9" rx="4"/><rect x="128" y="216" width="75" height="9" rx="4"/><rect x="128" y="262" width="91" height="9" rx="4"/><rect x="128" y="308" width="60" height="9" rx="4"/></g>
+  <g fill="#1e2b4e" stroke="#344369"><rect x="288" y="150" width="165" height="88" rx="12"/><rect x="473" y="150" width="165" height="88" rx="12"/><rect x="658" y="150" width="185" height="88" rx="12"/><rect x="288" y="261" width="555" height="154" rx="12"/><rect x="288" y="437" width="555" height="69" rx="12"/></g>
+  <g font-family="sans-serif"><g fill="#a5b4fc" font-size="12"><text x="308" y="177">PROJECTS</text><text x="493" y="177">TASKS COMPLETE</text><text x="678" y="177">NEXT MILESTONE</text></g><g fill="#f1f5f9" font-size="30"><text x="308" y="216">08</text><text x="493" y="216">24</text></g><text x="678" y="212" fill="#38bdf8" font-size="20">Review</text></g>
+  <path d="M310 387L380 366L450 375L520 329L590 340L660 310L730 317L820 282V396H310Z" fill="url(#chart)"/>
+  <path d="M310 387L380 366L450 375L520 329L590 340L660 310L730 317L820 282" stroke="#38bdf8" stroke-width="4" fill="none" stroke-linejoin="round"/>
+  <circle cx="316" cy="471" r="9" fill="#34d399"/><path d="m312 471 3 3 5-6" stroke="#101a36" stroke-width="2" fill="none"/>
+  <rect x="341" y="467" width="174" height="8" rx="4" fill="#94a3b8"/><rect x="729" y="458" width="91" height="25" rx="12" fill="#4f46e5"/>
+</svg>

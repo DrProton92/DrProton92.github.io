@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Appointment calendar illustration">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#082f49"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="60" cy="530" r="250" fill="#22d3ee" opacity=".1"/>
+  <rect x="112" y="64" width="736" height="472" rx="22" fill="#f0f9ff"/>
+  <path d="M112 148H848" stroke="#cbd5e1"/>
+  <text x="150" y="113" font-family="sans-serif" font-size="25" font-weight="bold" fill="#164e63">Your week, organized.</text>
+  <rect x="716" y="89" width="94" height="31" rx="15" fill="#0891b2"/><text x="737" y="110" font-family="sans-serif" font-size="13" fill="white">+ Book</text>
+  <g font-family="sans-serif" font-size="13" fill="#64748b" text-anchor="middle"><text x="223" y="183">MON</text><text x="353" y="183">TUE</text><text x="483" y="183">WED</text><text x="613" y="183">THU</text><text x="743" y="183">FRI</text></g>
+  <g stroke="#cbd5e1"><path d="M158 204H808M158 278H808M158 352H808M158 426H808M158 500H808"/><path d="M158 204V500M288 204V500M418 204V500M548 204V500M678 204V500M808 204V500"/></g>
+  <g fill="#a5f3fc"><rect x="168" y="216" width="110" height="49" rx="8"/><rect x="428" y="290" width="110" height="49" rx="8"/><rect x="688" y="438" width="110" height="49" rx="8"/></g>
+  <g fill="#c7d2fe"><rect x="298" y="290" width="110" height="122" rx="8"/><rect x="558" y="216" width="110" height="49" rx="8"/></g>
+  <rect x="168" y="364" width="110" height="49" rx="8" fill="#bae6fd"/><rect x="558" y="364" width="110" height="123" rx="8" fill="#0891b2"/>
+  <g stroke="#0e7490" stroke-width="6" stroke-linecap="round" opacity=".5"><path d="M182 232H248M182 247H226M312 308H378M442 307H508M572 234H638M182 382H248M702 456H768"/></g>
+  <path d="M572 382H638M572 399H615" stroke="#e0f2fe" stroke-width="6" stroke-linecap="round"/>
+</svg>

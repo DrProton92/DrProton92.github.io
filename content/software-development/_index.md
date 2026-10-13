@@ -35,13 +35,14 @@ sections:
     id: portfolio
     content:
       title: Portfolio
-      subtitle: Project stories and case studies coming soon.
+      subtitle: Explore software project stories and case studies.
+      count: 0
       filters:
         folders:
           - software-development
     design:
       css_class: service-page-portfolio
-      columns: 3
+      columns: 2
       fallback_icon: code-bracket
   - block: cta-card
     content:

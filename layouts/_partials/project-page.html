@@ -1,0 +1,42 @@
+{{ $service := site.GetPage .Section }}
+{{ $project := . }}
+{{ if eq .Type "project-detail" }}{{ $project = .Parent }}{{ end }}
+<article class="project-page">
+  <header class="project-header">
+    {{ with resources.Get "media/logo_with_music.png" }}
+      {{ $logo := .Fit "480x480 webp" }}
+      <img class="project-logo" src="{{ $logo.RelPermalink }}" alt="Perspective Solutions logo" width="{{ $logo.Width }}" height="{{ $logo.Height }}">
+    {{ end }}
+    <nav class="project-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ $service.RelPermalink }}#portfolio">{{ $service.Title }} portfolio</a>
+      {{ if eq .Type "project-detail" }}
+        <span aria-hidden="true"> / </span><a href="{{ $project.RelPermalink }}">{{ $project.Title }}</a>
+      {{ end }}
+    </nav>
+    {{ if $project.Params.example }}<p class="project-example-label">Example project · Illustrative content</p>{{ end }}
+    <h1 data-pagefind-meta="title" data-pagefind-body>{{ .Title }}</h1>
+    <p class="project-summary" data-pagefind-body>{{ .Params.summary }}</p>
+  </header>
+  {{ with $project.Resources.GetMatch "{featured,cover,thumbnail}*" }}
+    {{ $image := . }}
+    {{ if reflect.IsImageResourceProcessable . }}{{ $image = .Fit "1440x900 webp" }}{{ end }}
+    <img class="project-cover" src="{{ $image.RelPermalink }}" alt="{{ $project.Params.image.alt | default $project.Title }}" width="1440" height="900" decoding="async">
+  {{ end }}
+  <div class="project-body prose prose-slate lg:prose-lg dark:prose-invert" data-pagefind-body>
+    {{ .Content }}
+  </div>
+  {{ if .IsSection }}
+    {{ with .RegularPages.ByWeight }}
+      <section class="project-supporting-pages" aria-labelledby="project-details-heading">
+        <h2 id="project-details-heading">More about this project</h2>
+        <ul>
+          {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a><p>{{ .Params.summary }}</p></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+  <nav class="project-bottom-nav" aria-label="Project navigation">
+    {{ if eq .Type "project-detail" }}<a href="{{ $project.RelPermalink }}">← Back to project overview</a>{{ end }}
+    <a href="{{ $service.RelPermalink }}#portfolio">← Back to {{ $service.Title }} portfolio</a>
+  </nav>
+</article>
