@@ -29,6 +29,10 @@
   padding-block: 2rem 0 !important;
 }
 
+.service-page-hero.hbb-section:has(+ .service-page-content) {
+  margin-bottom: 1rem;
+}
+
 .service-page-content.hbb-section {
   padding-block: 0 !important;
 }

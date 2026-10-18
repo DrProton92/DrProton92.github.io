@@ -21,5 +21,5 @@ sections:
         Email us at [admin@perspectivesolutions.dev](mailto:admin@perspectivesolutions.dev).
     design:
       spacing:
-        padding: [24, 0, 24, 0]
+        padding: ["2rem", 0, "2rem", 0]
 ---

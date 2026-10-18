@@ -7,7 +7,6 @@ sections:
   - block: hero
     content:
       title: About Perspective Solutions
-      text: Software Development and Music Production since 1998.
       media:
         type: image
         src: logo_with_music.png
@@ -19,14 +18,14 @@ sections:
   - block: markdown
     content:
       text: |
-        Perspective Solutions is a sole proprietorship bringing together software development and music production. In business since 1998, we combine technical problem-solving with creative work to help bring ideas to life.
+        Perspective Solutions is a sole proprietorship bringing together software development and music production. Operating since 1998, we combine technical problem-solving with creative work to help bring ideas to life.
 
-        Our [Software Development](/software-development/) services include custom applications, web development, and maintenance and enhancements for existing software.
+        Our [Software Development](/software-development/) services include custom applications, lite web development, and maintenance and enhancements for existing software.
 
         Our [Music Production](/music-production/) services include production and arrangement, recording and editing, and mixing and mastering.
     design:
       spacing:
-        padding: [24, 0, 24, 0]
+        padding: ["2rem", 0, "2rem", 0]
   - block: cta-card
     content:
       title: Let's talk about your project

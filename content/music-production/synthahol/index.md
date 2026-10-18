@@ -1,6 +1,7 @@
 ---
 title: Synthahol
 type: project
+weight: 1
 audio: Synthahol.mp3
 date: 2026-10-02
 summary: An original track

@@ -1,6 +1,7 @@
 ---
 title: Leave That Thing Alone
 type: project
+weight: 2
 audio: LeaveThatThingAlone.mp3
 date: 2026-10-01
 summary: A cover of a classic Rush tune
