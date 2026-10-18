@@ -100,8 +100,14 @@ html.dark .portfolio-card {
 .portfolio-card-image {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 8 / 5;
   object-fit: cover;
+}
+
+.portfolio-card-image--contain {
+  object-fit: contain;
+  background: #f1f5f9;
 }
 
 .portfolio-card-copy {
@@ -128,6 +134,16 @@ html.dark .portfolio-card {
   line-height: 1.6;
 }
 
+.portfolio-card-summary a {
+  color: #4338ca;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+html.dark .portfolio-card-summary a {
+  color: #a5b4fc;
+}
+
 .portfolio-read-more {
   display: inline-block;
   margin-top: 1rem;
@@ -136,12 +152,49 @@ html.dark .portfolio-card {
   font-weight: 500;
 }
 
+.portfolio-coming-soon {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+html.dark .portfolio-coming-soon {
+  color: #94a3b8;
+}
+
 html.dark .portfolio-read-more {
   color: #a5b4fc;
 }
 
-.portfolio-card-link:hover h3 {
+h3 .portfolio-card-link:hover {
   color: #6366f1;
+}
+
+.portfolio-play-image,
+.portfolio-play-title {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.portfolio-play-image {
+  display: block;
+  width: 100%;
+}
+
+.portfolio-play-title:hover {
+  color: #6366f1;
+}
+
+.portfolio-play-image:focus-visible,
+.portfolio-play-title:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: -3px;
 }
 
 .project-page {

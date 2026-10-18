@@ -1,8 +1,18 @@
 # Managing the portfolios
 
 The Software Development and Music Production pages each show a portfolio grid.
-Each card is one link containing an image, title, and summary. The grid is
-rendered by Hugo, so the cards and links work without JavaScript.
+Software cards link directly to live websites and apps; placeholders have no
+link and display "Coming soon." Music cards show an audio player;
+their artwork and title start playback with JavaScript, and native player
+controls remain available without it. The grid is rendered by Hugo.
+
+For software, set `external_url` to the live site or app URL. Optionally set
+`link_text` to customize the call to action. Set `placeholder: true` when a
+project has no destination yet. For a music track, set `audio` to the MP3
+filename in the bundle. Use
+`build: {render: never, list: always, publishResources: true}` to keep the track
+in the portfolio and publish its assets without generating a story page.
+Do not add aliases or story content to these portfolio bundles.
 
 ## Add a project
 
@@ -15,16 +25,21 @@ hugo new content --kind project music-production/my-project
 ```
 
 The project archetype creates an `index.md` page and a placeholder `cover.svg`.
-Edit the title, summary, date, image description, and Markdown story in
-`index.md`. Replace the placeholder illustration with your own picture. Use
+Edit the title, summary, date, and image description in `index.md`, remove the
+sample story body, and add the build settings and destination described above.
+Replace the placeholder illustration with your own picture. Use
 `featured.jpg`, `featured.png`, or `featured.webp` for a photo or screenshot;
 Hugo creates optimized images and uses the featured image for sharing metadata.
 Remove the placeholder when you add the replacement. SVG illustrations should
 use `cover.svg` (the upstream theme's sharing metadata expects raster featured
 images). Landscape images around 1600 × 1000 pixels work well.
+For application screenshots, set `image.fit: contain` to show the full image
+inside the card without cropping its controls or charts.
 
 Set `draft: false` to publish the page in a normal build. New projects appear
-automatically in their service's portfolio, newest first. Keep `type: project`:
+automatically in their service's portfolio, ordered by `weight` (lowest first),
+then newest first. Omitted weights default to zero; Retired Thinker uses `-1`
+to appear first. External portfolio links open in a new tab. Keep `type: project`:
 this is how the grid distinguishes project overviews from supporting pages.
 The `example: true` flag adds an Example project label; remove it or set it to
 `false` for real work. Illustrative projects should be clearly labeled.

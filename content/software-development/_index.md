@@ -25,7 +25,7 @@ sections:
           description: Windows and Mac software designed around your requirements and workflows.
         - name: Lite Web Development
           icon: globe-alt
-          description: Simple websites and web applications that connect your business with its users.
+          description: Simple websites and web applications for business or pleasure.
         - name: Maintenance and enhancements
           icon: wrench-screwdriver
           description: Updates, troubleshooting, and improvements for existing applications. Especially those using older technologies or frameworks.
@@ -35,7 +35,7 @@ sections:
     id: portfolio
     content:
       title: Portfolio
-      subtitle: Explore software project stories and case studies.
+      subtitle: Explore websites, interactive apps, and upcoming projects.
       count: 0
       filters:
         folders:

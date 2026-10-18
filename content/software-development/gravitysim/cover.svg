@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">GravitySim</title>
+  <desc id="desc">Orbital paths and small bodies circling a glowing center against a deep blue background.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#080e20"/><stop offset="1" stop-color="#243564"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#a5b4fc" stop-opacity=".5"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core" cx=".35" cy=".3"><stop stop-color="#e0f2fe"/><stop offset=".6" stop-color="#818cf8"/><stop offset="1" stop-color="#4338ca"/></radialGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <g fill="#c7d2fe" opacity=".55"><circle cx="95" cy="130" r="2"/><circle cx="290" cy="75" r="2"/><circle cx="790" cy="145" r="2"/><circle cx="845" cy="475" r="2"/><circle cx="140" cy="440" r="2"/><circle cx="710" cy="530" r="2"/></g>
+  <circle cx="540" cy="280" r="185" fill="url(#halo)"/>
+  <g fill="none" stroke="#a5b4fc" stroke-width="2">
+    <ellipse cx="540" cy="280" rx="245" ry="92" transform="rotate(-28 540 280)" opacity=".65"/>
+    <ellipse cx="540" cy="280" rx="200" ry="135" transform="rotate(37 540 280)" opacity=".4"/>
+    <ellipse cx="540" cy="280" rx="285" ry="160" transform="rotate(-12 540 280)" opacity=".25"/>
+  </g>
+  <circle cx="540" cy="280" r="43" fill="url(#core)"/>
+  <circle cx="324" cy="395" r="13" fill="#5eead4"/>
+  <circle cx="694" cy="410" r="9" fill="#fda48c"/>
+  <circle cx="818" cy="246" r="7" fill="#c4b5fd"/>
+  <text x="64" y="500" fill="#f1f5f9" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">GravitySim</text>
+  <text x="67" y="539" fill="#a5b4fc" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="4">COMING SOON</text>
+</svg>

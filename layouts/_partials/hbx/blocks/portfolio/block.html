@@ -6,7 +6,7 @@
 {{ $projects := where site.Pages "Section" "in" $folders }}
 {{ $projects = where $projects "Type" "eq" "project" }}
 {{ $projects = where $projects "Kind" "in" (slice "page" "section") }}
-{{ $projects = $projects.ByDate.Reverse }}
+{{ $projects = $projects.ByWeight }}
 {{ with $content.count }}{{ $projects = first (int .) $projects }}{{ end }}
 
 <div class="portfolio-container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -16,33 +16,61 @@
   </div>
   <div class="portfolio-grid">
     {{ range $projects }}
+      {{ $project := . }}
+      {{ $audio := false }}
+      {{ if eq .Section "music-production" }}
+        {{ with .Params.audio }}{{ $audio = $project.Resources.GetMatch . }}{{ end }}
+      {{ end }}
+      {{ $playerID := printf "portfolio-audio-%s" .File.UniqueID }}
+      {{ $url := .Params.external_url | default .RelPermalink }}
+      {{ if .Params.placeholder }}{{ $url = "" }}{{ end }}
       <article class="portfolio-card">
-        <a class="portfolio-card-link" href="{{ .RelPermalink }}">
+        {{ if and (not $audio) $url }}
+          <a class="portfolio-card-link" href="{{ $url }}" aria-label="Open {{ .Title }}"{{ if .Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>
+        {{ end }}
+          {{ if $audio }}<button type="button" class="portfolio-play-image" data-portfolio-play="{{ $playerID }}" aria-controls="{{ $playerID }}" aria-label="Play {{ .Title }}">{{ end }}
           {{ with .Resources.GetMatch "{featured,cover,thumbnail}*" }}
             {{ $image := . }}
-            {{ if reflect.IsImageResourceProcessable . }}{{ $image = .Fill "960x600 webp" }}{{ end }}
-            <img class="portfolio-card-image" src="{{ $image.RelPermalink }}" alt="" width="960" height="600" loading="lazy" decoding="async">
+            {{ $contain := eq $project.Params.image.fit "contain" }}
+            {{ if reflect.IsImageResourceProcessable . }}
+              {{ if $contain }}
+                {{ $image = .Fit "960x600 webp" }}
+              {{ else }}
+                {{ $image = .Fill (printf "960x600 %s webp" ($project.Params.image.anchor | default "Smart")) }}
+              {{ end }}
+            {{ end }}
+            <img class="portfolio-card-image{{ if $contain }} portfolio-card-image--contain{{ end }}" src="{{ $image.RelPermalink }}" alt="" width="960" height="600" loading="lazy" decoding="async">
           {{ end }}
+          {{ if $audio }}</button>{{ end }}
+        {{ if and (not $audio) $url }}</a>{{ end }}
           <div class="portfolio-card-copy">
             {{ if .Params.example }}<span class="project-example-label">Example project</span>{{ end }}
-            <h3>{{ .Title }}</h3>
-            <p>{{ .Summary | plainify }}</p>
-            <span class="portfolio-read-more" aria-hidden="true">Read project story →</span>
+            <h3>{{ if $audio }}<button type="button" class="portfolio-play-title" data-portfolio-play="{{ $playerID }}" aria-controls="{{ $playerID }}" aria-label="Play {{ .Title }}">{{ .Title }}</button>{{ else if $url }}<a class="portfolio-card-link" href="{{ $url }}"{{ if .Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}</h3>
+            <p class="portfolio-card-summary">{{ .RenderString (.Params.summary | default .Summary) }}</p>
+            {{ if .Params.placeholder }}
+              <span class="portfolio-coming-soon">Coming soon</span>
+            {{ else if .Params.external_url }}
+              <a class="portfolio-read-more" href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .Params.link_text | default "Open app →" }}</a>
+            {{ else if not $audio }}
+              <a class="portfolio-read-more" href="{{ $url }}">Read project story →</a>
+            {{ end }}
           </div>
-        </a>
-        {{ $project := . }}
-        {{ with .Params.audio }}
-          {{ with $project.Resources.GetMatch . }}
-            <div class="portfolio-card-audio">
-              <audio controls preload="none" aria-label="Listen to {{ $project.Title }}">
-                <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
-              </audio>
-            </div>
-          {{ end }}
+        {{ with $audio }}
+          <div class="portfolio-card-audio">
+            <audio id="{{ $playerID }}" controls preload="none" tabindex="-1" aria-label="Listen to {{ $project.Title }}">
+              <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+            </audio>
+          </div>
         {{ end }}
       </article>
     {{ else }}
-      <p>Project stories coming soon.</p>
+      <p>Portfolio items coming soon.</p>
     {{ end }}
   </div>
 </div>
+
+{{ if in $folders "music-production" }}
+  {{ with resources.Get "js/portfolio-audio.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{ end }}
+{{ end }}

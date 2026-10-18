@@ -1,6 +1,6 @@
 ---
 title: 'Perspective Solutions'
-summary: Software Development and Music Production from a sole proprietorship in business since 1998.
+summary: Software Development and Music Production from a sole proprietorship in business since 1998
 type: landing
 
 sections:
