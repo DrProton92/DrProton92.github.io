@@ -27,7 +27,7 @@ Set `draft: false` to publish the page in a normal build. New projects appear
 automatically in their service's portfolio, newest first. Keep `type: project`:
 this is how the grid distinguishes project overviews from supporting pages.
 The `example: true` flag adds an Example project label; remove it or set it to
-`false` for real work. The four supplied sample projects are clearly labeled.
+`false` for real work. Illustrative projects should be clearly labeled.
 
 ```text
 content/
@@ -77,9 +77,8 @@ summary: How the application was designed and built.
 ---
 ```
 
-The `weight` controls supporting-page order, lowest first. The Workflow
-Dashboard example demonstrates this structure. Its cascade also supplies
-`type: project-detail` to child pages as a default.
+The `weight` controls supporting-page order, lowest first. A cascade on the overview can also supply `type: project-detail` to child
+pages as a default.
 
 ## Templates and preview
 

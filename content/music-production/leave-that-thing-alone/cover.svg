@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">Leave That Thing Alone</title>
+  <desc id="desc">An electric bass cuts diagonally across glowing teal rhythm rings and coral accents on a deep midnight background.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#080e20"/><stop offset="1" stop-color="#173742"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#2dd4bf" stop-opacity=".25"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#b53753"/><stop offset=".5" stop-color="#f87571"/><stop offset="1" stop-color="#ffbb92"/>
+    </linearGradient>
+    <linearGradient id="neck" x2="1" y2="0">
+      <stop stop-color="#3b2631"/><stop offset="1" stop-color="#67404a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#a7f3d0" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="600" fill="url(#background)"/>
+  <rect width="960" height="600" fill="url(#grid)"/>
+  <circle cx="640" cy="310" r="320" fill="url(#halo)"/>
+  <!-- Broken rings and offbeat marks suggest motion and syncopation. -->
+  <g fill="none" stroke="#5eead4" transform="rotate(-20 640 310)">
+    <circle cx="640" cy="310" r="229" stroke-width="2" opacity=".18"/>
+    <circle cx="640" cy="310" r="198" stroke-width="16" stroke-dasharray="295 38 64 38 110 699" opacity=".25"/>
+    <circle cx="640" cy="310" r="163" stroke-width="2" stroke-dasharray="8 14" opacity=".5"/>
+    <circle cx="640" cy="310" r="135" stroke-width="30" stroke-dasharray="175 80 210 383" opacity=".13"/>
+  </g>
+  <g stroke="#fda48c" stroke-width="3" opacity=".7">
+    <path d="m818 102 13-18m12 39 19-11m-50 352 16 17m-40 2 9 20"/>
+  </g>
+  <g fill="#5eead4" opacity=".6">
+    <circle cx="424" cy="205" r="4"/><circle cx="854" cy="332" r="4"/>
+    <circle cx="775" cy="520" r="3"/><circle cx="478" cy="451" r="3"/>
+  </g>
+  <!-- Four-string electric bass, tilted from the lower body to the headstock. -->
+  <g transform="translate(625 330) rotate(36)">
+    <path d="M-18 24C-30 18-34-13-42-33C-66-20-73 6-57 38C-50 52-62 66-76 81C-109 117-83 165-43 174Q0 184 43 174C83 165 109 117 76 81C62 66 50 52 57 38C73 6 66-20 42-33C34-13 30 18 18 24Z" fill="#020617" opacity=".35" transform="translate(9 12)"/>
+    <path d="M-18 24C-30 18-34-13-42-33C-66-20-73 6-57 38C-50 52-62 66-76 81C-109 117-83 165-43 174Q0 184 43 174C83 165 109 117 76 81C62 66 50 52 57 38C73 6 66-20 42-33C34-13 30 18 18 24Z" fill="url(#body)" stroke="#ffa98b" stroke-width="2"/>
+    <path d="M-18 33C-34 29-43 18-47 5C-52 23-43 40-38 52C-32 66-44 81-51 92C-62 109-46 138-24 141H24C46 138 62 109 51 92C44 81 32 66 38 52C43 40 52 23 47 5C43 18 34 29 18 33Z" fill="#111b2a"/>
+    <path d="M-13-199H13L17 78H-17Z" fill="url(#neck)" stroke="#d7a483" stroke-width="2"/>
+    <path d="M-13-199L-23-249Q-26-267-12-268H12Q26-267 23-249L13-199Z" fill="#ffb38e"/>
+    <g fill="#bdd3d9"><rect x="-36" y="-252" width="14" height="9" rx="3"/><rect x="-31" y="-231" width="12" height="9" rx="3"/><rect x="22" y="-252" width="14" height="9" rx="3"/><rect x="19" y="-231" width="12" height="9" rx="3"/></g>
+    <g stroke="#cba18f" stroke-width="1" opacity=".65">
+      <path d="M-13-180H13M-14-155H14M-14-131H14M-14-108H14M-15-86H15M-15-65H15M-15-45H15M-16-26H16M-16-8H16M-16 9H16M-16 25H16M-17 40H17M-17 54H17"/>
+    </g>
+    <g fill="#e8c5ae"><circle cy="-143" r="2"/><circle cy="-97" r="2"/><circle cy="-55" r="2"/><circle cy="-17" r="2"/><circle cx="-6" cy="33" r="2"/><circle cx="6" cy="33" r="2"/></g>
+    <rect x="-25" y="79" width="50" height="12" rx="3" fill="#050b18"/>
+    <rect x="-24" y="106" width="48" height="15" rx="3" fill="#b1c3cd"/>
+    <g stroke="#e7f2ef" opacity=".85"><path d="M-9-253V117M-3-253V117M3-253V117M9-253V117"/></g>
+    <g fill="#f1d5c2" stroke="#9d4657"><circle cx="42" cy="103" r="6"/><circle cx="41" cy="126" r="6"/></g>
+  </g>
+  <rect x="64" y="66" width="48" height="5" rx="2" fill="#5eead4"/>
+  <g fill="#f0f6f4" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="64" letter-spacing="-2">
+    <text x="60" y="153">LEAVE</text>
+    <text x="60" y="221">THAT</text>
+    <text x="60" y="289">THING</text>
+    <text x="60" y="357" fill="#ff9d86">ALONE</text>
+  </g>
+</svg>

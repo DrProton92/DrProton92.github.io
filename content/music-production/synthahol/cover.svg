@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Ambient album artwork illustration">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Synthahol artwork illustration">
   <defs>
     <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#140e38"/><stop offset=".6" stop-color="#4c1d95"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient>
     <radialGradient id="glow"><stop stop-color="#ddd6fe" stop-opacity=".6"/><stop offset="1" stop-color="#c4b5fd" stop-opacity="0"/></radialGradient>
@@ -11,5 +11,5 @@
   <path d="M0 433Q187 361 360 426T688 420T960 420V600H0Z" fill="#0369a1" opacity=".8"/>
   <path d="M0 485Q155 439 335 480T675 467T960 479V600H0Z" fill="#083344"/>
   <g fill="none" stroke="#a5f3fc" opacity=".3"><path d="M0 473Q176 423 360 471T714 462T960 465"/><path d="M0 504Q176 454 360 502T714 493T960 496"/><path d="M0 535Q176 485 360 533T714 524T960 527"/></g>
-  <text x="480" y="88" text-anchor="middle" font-family="sans-serif" font-size="15" letter-spacing="9" fill="#e0e7ff">AMBIENT / EP</text>
+  <text x="480" y="88" text-anchor="middle" font-family="sans-serif" font-size="15" letter-spacing="9" fill="#e0e7ff">SYNTHAHOL</text>
 </svg>

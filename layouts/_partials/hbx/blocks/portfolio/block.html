@@ -16,7 +16,8 @@
   </div>
   <div class="portfolio-grid">
     {{ range $projects }}
-      <a class="portfolio-card portfolio-card-link" href="{{ .RelPermalink }}">
+      <article class="portfolio-card">
+        <a class="portfolio-card-link" href="{{ .RelPermalink }}">
           {{ with .Resources.GetMatch "{featured,cover,thumbnail}*" }}
             {{ $image := . }}
             {{ if reflect.IsImageResourceProcessable . }}{{ $image = .Fill "960x600 webp" }}{{ end }}
@@ -28,7 +29,18 @@
             <p>{{ .Summary | plainify }}</p>
             <span class="portfolio-read-more" aria-hidden="true">Read project story →</span>
           </div>
-      </a>
+        </a>
+        {{ $project := . }}
+        {{ with .Params.audio }}
+          {{ with $project.Resources.GetMatch . }}
+            <div class="portfolio-card-audio">
+              <audio controls preload="none" aria-label="Listen to {{ $project.Title }}">
+                <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+              </audio>
+            </div>
+          {{ end }}
+        {{ end }}
+      </article>
     {{ else }}
       <p>Project stories coming soon.</p>
     {{ end }}

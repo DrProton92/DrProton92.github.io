@@ -108,6 +108,15 @@ html.dark .portfolio-card {
   padding: 1.25rem;
 }
 
+.portfolio-card-audio {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.portfolio-card-audio audio {
+  display: block;
+  width: 100%;
+}
+
 .portfolio-card-copy h3 {
   margin-block: 0.35rem 0.5rem;
   font-size: 1.25rem;

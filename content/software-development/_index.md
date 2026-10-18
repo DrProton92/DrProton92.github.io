@@ -20,15 +20,15 @@ sections:
     id: services
     content:
       items:
-        - name: Custom applications
+        - name: Custom Applications
           icon: code-bracket
-          description: Software designed around your requirements and workflows.
-        - name: Web development
+          description: Windows and Mac software designed around your requirements and workflows.
+        - name: Lite Web Development
           icon: globe-alt
-          description: Websites and web applications that connect your business with its users.
+          description: Simple websites and web applications that connect your business with its users.
         - name: Maintenance and enhancements
           icon: wrench-screwdriver
-          description: Updates, troubleshooting, and improvements for existing applications.
+          description: Updates, troubleshooting, and improvements for existing applications. Especially those using older technologies or frameworks.
     design:
       css_class: "service-page-content bg-gray-50 dark:bg-gray-900/50"
   - block: portfolio
@@ -44,15 +44,4 @@ sections:
       css_class: service-page-portfolio
       columns: 2
       fallback_icon: code-bracket
-  - block: cta-card
-    content:
-      title: Explore our creative services
-      text: Perspective Solutions also offers Music Production.
-      button:
-        text: Music Production
-        url: "/music-production/"
-    design:
-      css_class: service-page-cta
-      card:
-        css_class: "bg-gray-100 dark:bg-gray-800/60"
 ---

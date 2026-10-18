@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Simulated retirement savings paths">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1535"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <rect x="88" y="66" width="784" height="468" rx="22" fill="#101a36" stroke="#818cf8" stroke-opacity=".5"/>
+  <text x="125" y="115" fill="#e0e7ff" font-family="sans-serif" font-size="22" letter-spacing="2">RETIREMENT SIMULATION</text>
+  <g stroke="#344369"><path d="M145 165V450H825"/><path d="M145 240H825M145 310H825M145 380H825" stroke-dasharray="5 6"/></g>
+  <g fill="none" stroke-width="4" stroke-linejoin="round"><path d="M145 220L245 240L345 205L445 280L545 245L645 315L745 290L825 340" stroke="#38bdf8"/>
+<path d="M145 220L245 190L345 225L445 185L545 220L645 180L745 155L825 125" stroke="#a78bfa"/>
+<path d="M145 220L245 260L345 245L445 320L545 355L645 330L745 410L825 440" stroke="#34d399"/>
+<path d="M145 220L245 210L345 270L445 250L545 300L645 275L745 320L825 300" stroke="#fbbf24"/></g>
+  <text x="485" y="490" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="18">Age →</text>
+</svg>
