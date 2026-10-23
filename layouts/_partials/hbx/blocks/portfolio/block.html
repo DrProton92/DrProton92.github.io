@@ -22,9 +22,19 @@
         {{ with .Params.audio }}{{ $audio = $project.Resources.GetMatch . }}{{ end }}
       {{ end }}
       {{ $playerID := printf "portfolio-audio-%s" .File.UniqueID }}
+      {{ $video := false }}
+      {{ with .Params.video }}{{ $video = $project.Resources.GetMatch . }}{{ end }}
       {{ $url := .Params.external_url | default .RelPermalink }}
-      {{ if .Params.placeholder }}{{ $url = "" }}{{ end }}
+      {{ if or .Params.placeholder (and $video (not .Params.external_url)) }}{{ $url = "" }}{{ end }}
       <article class="portfolio-card">
+        {{ if $video }}
+          {{ $poster := "" }}
+          {{ with .Resources.GetMatch "featured*" }}{{ $poster = (.Fit "960x600 webp").RelPermalink }}{{ end }}
+          <video class="portfolio-card-video" controls playsinline preload="none" poster="{{ $poster }}" width="960" height="600" aria-label="Watch {{ .Title }} sample">
+            <source src="{{ $video.RelPermalink }}" type="{{ $video.MediaType.Type }}">
+            Your browser does not support embedded video.
+          </video>
+        {{ else }}
         {{ if and (not $audio) $url }}
           <a class="portfolio-card-link" href="{{ $url }}" aria-label="Open {{ .Title }}"{{ if .Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>
         {{ end }}
@@ -43,6 +53,7 @@
           {{ end }}
           {{ if $audio }}</button>{{ end }}
         {{ if and (not $audio) $url }}</a>{{ end }}
+        {{ end }}
           <div class="portfolio-card-copy">
             {{ if .Params.example }}<span class="project-example-label">Example project</span>{{ end }}
             <h3>{{ if $audio }}<button type="button" class="portfolio-play-title" data-portfolio-play="{{ $playerID }}" aria-controls="{{ $playerID }}" aria-label="Play {{ .Title }}">{{ .Title }}</button>{{ else if $url }}<a class="portfolio-card-link" href="{{ $url }}"{{ if .Params.external_url }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}</h3>
@@ -51,7 +62,7 @@
               <span class="portfolio-coming-soon">Coming soon</span>
             {{ else if .Params.external_url }}
               <a class="portfolio-read-more" href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ .Params.link_text | default "Open app →" }}</a>
-            {{ else if not $audio }}
+            {{ else if not (or $audio $video) }}
               <a class="portfolio-read-more" href="{{ $url }}">Read project story →</a>
             {{ end }}
           </div>

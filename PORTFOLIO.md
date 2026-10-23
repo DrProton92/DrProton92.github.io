@@ -14,6 +14,12 @@ filename in the bundle. Use
 in the portfolio and publish its assets without generating a story page.
 Do not add aliases or story content to these portfolio bundles.
 
+For a video demo, set `video` to the MP4 filename in its bundle and add a
+`featured.jpg` poster frame. The tile shows native video controls instead of
+a linked image. Galaxim demonstrates this setup. Use a web-sized video;
+full-resolution originals can be retained in the ignored `.local-media/`
+directory outside the published content.
+
 ## Add a project
 
 Create a project bundle in the appropriate service folder:

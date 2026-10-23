@@ -114,6 +114,15 @@ html.dark .portfolio-card {
   background: #f1f5f9;
 }
 
+.portfolio-card-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: contain;
+  background: #000;
+}
+
 .portfolio-card-copy {
   padding: 1.25rem;
 }

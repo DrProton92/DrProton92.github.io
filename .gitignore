@@ -28,6 +28,9 @@ hugo_stats.json
 # Dependencies
 node_modules/
 
+# Original media retained locally when creating web-sized portfolio assets
+.local-media/
+
 # ============================================================================
 # Environment & Configuration
 # ============================================================================
